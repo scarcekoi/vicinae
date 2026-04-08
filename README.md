@@ -38,7 +38,7 @@
 
 > [!NOTE]
 > Catppuccin themes are included by default in **Vicinae**.
-> When searching for the custom theme, make sure to select the one named **Catppuccin <Flavor> <Accent>**. The default themes are just **Catppuccin <Flavor>**.
+> When searching for the custom theme, make sure to select the one named **Catppuccin &lt;Flavor&gt; &lt;Accent&gt;**. The default themes are just **Catppuccin &lt;Flavor&gt;**.
 
 1. Download the flavor and accent combination of your choice from [themes](themes).
 2. Move the downloaded file to: `~/.local/share/vicinae/themes/`.
