@@ -1,0 +1,80 @@
+[meta]
+version = 1
+name = "Catppuccin Frappé Flamingo"
+description = "A less vibrant alternative using subdued colors for a muted aesthetic."
+variant = "dark"
+inherits = "vicinae-dark"
+icon = "icons/catppuccin.png"
+
+[colors.core]
+accent = "#eebebe"
+accent_foreground = "#303446"
+background = "#232634"
+foreground = "#c6d0f5"
+secondary_background = "#292c3c"
+border = "#303446"
+
+[colors.main_window]
+border = "#303446"
+footer = { background = "colors.core.secondary_background" }
+
+[colors.settings_window]
+border = "#303446"
+
+[colors.accents]
+blue = "#8caaee"
+green = "#a6d189"
+magenta = "#ca9ee6"
+orange = "#ef9f76"
+red = "#e78284"
+yellow = "#e5c890"
+cyan = "#81c8be"
+purple = "#ca9ee6"
+
+[colors.shortcut]
+border = "colors.core.border"
+
+[colors.text]
+default = "colors.core.foreground"
+muted = "#c6d0f5"
+danger = "#e78284"
+success = "#a6d189"
+placeholder = "#c6d0f5"
+selection = { background = "#414559", foreground = "#c6d0f5" }
+
+[colors.text.links]
+default = "#8caaee"
+visited = "#babbf1"
+
+[colors.input]
+border = "#303446"
+border_focus = "#8caaee"
+border_error = "#e78284"
+
+[colors.button.primary]
+background = "#303446"
+foreground = "#c6d0f5"
+hover = { background = "#2ee78284" }
+focus = { outline = "colors.core.accent" }
+
+[colors.list.item.hover]
+foreground = "#c6d0f5"
+secondary_foreground = "#c6d0f5"
+
+[colors.list.item.selection]
+background = "#303446"
+foreground = "#c6d0f5"
+secondary_background = "#303446"
+secondary_foreground = "#c6d0f5"
+
+[colors.grid.item]
+background = "#292c3c"
+hover = { outline = "#c6d0f5" }
+selection = { outline = "#c6d0f5" }
+
+[colors.scrollbars]
+background = "#303446"
+
+[colors.loading]
+bar = "#c6d0f5"
+spinner = "#c6d0f5"

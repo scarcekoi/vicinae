@@ -1,0 +1,90 @@
+---
+whiskers:
+  version: "^2.9.0"
+  matrix:
+    - flavor
+    - accent
+  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.toml"
+  hex_format: "#{{z}}{{r}}{{g}}{{b}}"
+---
+{%- set accent = flavor.colors[accent] -%}
+[meta]
+version = 1
+name = "Catppuccin {{ flavor.name }} {{ accent.name }}"
+description = "{%- if flavor.identifier == "latte" -%}The lightest Catppuccin theme harmoniously inverting the essence of Catppuccin's dark themes.{%- elif flavor.identifier == "frappe" -%}A less vibrant alternative using subdued colors for a muted aesthetic.{%- elif flavor.identifier == "macchiato" -%}Medium contrast with gentle colors creating a soothing atmosphere.{%- elif flavor.identifier == "mocha" -%}Catppuccin's darkest variant offering a cozy feeling with color-rich accents.{%- endif -%}"
+variant = "{{ if(cond=flavor.dark, t="dark", f="light") }}"
+inherits = "vicinae-{{ if(cond=flavor.dark, t="dark", f="light") }}"
+icon = "icons/catppuccin.png"
+
+[colors.core]
+accent = "{{ accent.hex }}"
+accent_foreground = "{{ base.hex }}"
+background = "{{ crust.hex }}"
+foreground = "{{ text.hex }}"
+secondary_background = "{{ mantle.hex }}"
+border = "{{ base.hex }}"
+
+[colors.main_window]
+border = "{{ base.hex }}"
+footer = { background = "colors.core.secondary_background" }
+
+[colors.settings_window]
+border = "{{ base.hex }}"
+
+[colors.accents]
+blue = "{{ blue.hex }}"
+green = "{{ green.hex }}"
+magenta = "{{ mauve.hex }}"
+orange = "{{ peach.hex }}"
+red = "{{ red.hex }}"
+yellow = "{{ yellow.hex }}"
+cyan = "{{ teal.hex }}"
+purple = "{{ mauve.hex }}"
+
+[colors.shortcut]
+border = "colors.core.border"
+
+[colors.text]
+default = "colors.core.foreground"
+muted = "{{ text.hex }}"
+danger = "{{ red.hex }}"
+success = "{{ green.hex }}"
+placeholder = "{{ text.hex }}"
+selection = { background = "{{ surface0.hex }}", foreground = "{{ text.hex }}" }
+
+[colors.text.links]
+default = "{{ blue.hex }}"
+visited = "{{ lavender.hex }}"
+
+[colors.input]
+border = "{{ base.hex }}"
+border_focus = "{{ blue.hex }}"
+border_error = "{{ red.hex }}"
+
+[colors.button.primary]
+background = "{{ base.hex }}"
+foreground = "{{ text.hex }}"
+hover = { background = "{{ red | mod(opacity=0.18) | hex }}" }
+focus = { outline = "colors.core.accent" }
+
+[colors.list.item.hover]
+foreground = "{{ text.hex }}"
+secondary_foreground = "{{ text.hex }}"
+
+[colors.list.item.selection]
+background = "{{ base.hex }}"
+foreground = "{{ text.hex }}"
+secondary_background = "{{ base.hex }}"
+secondary_foreground = "{{ text.hex }}"
+
+[colors.grid.item]
+background = "{{ mantle.hex }}"
+hover = { outline = "{{ text.hex }}" }
+selection = { outline = "{{ text.hex }}" }
+
+[colors.scrollbars]
+background = "{{ base.hex }}"
+
+[colors.loading]
+bar = "{{ text.hex }}"
+spinner = "{{ text.hex }}"

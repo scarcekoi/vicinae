@@ -1,0 +1,80 @@
+[meta]
+version = 1
+name = "Catppuccin Latte Flamingo"
+description = "The lightest Catppuccin theme harmoniously inverting the essence of Catppuccin's dark themes."
+variant = "light"
+inherits = "vicinae-light"
+icon = "icons/catppuccin.png"
+
+[colors.core]
+accent = "#dd7878"
+accent_foreground = "#eff1f5"
+background = "#dce0e8"
+foreground = "#4c4f69"
+secondary_background = "#e6e9ef"
+border = "#eff1f5"
+
+[colors.main_window]
+border = "#eff1f5"
+footer = { background = "colors.core.secondary_background" }
+
+[colors.settings_window]
+border = "#eff1f5"
+
+[colors.accents]
+blue = "#1e66f5"
+green = "#40a02b"
+magenta = "#8839ef"
+orange = "#fe640b"
+red = "#d20f39"
+yellow = "#df8e1d"
+cyan = "#179299"
+purple = "#8839ef"
+
+[colors.shortcut]
+border = "colors.core.border"
+
+[colors.text]
+default = "colors.core.foreground"
+muted = "#4c4f69"
+danger = "#d20f39"
+success = "#40a02b"
+placeholder = "#4c4f69"
+selection = { background = "#ccd0da", foreground = "#4c4f69" }
+
+[colors.text.links]
+default = "#1e66f5"
+visited = "#7287fd"
+
+[colors.input]
+border = "#eff1f5"
+border_focus = "#1e66f5"
+border_error = "#d20f39"
+
+[colors.button.primary]
+background = "#eff1f5"
+foreground = "#4c4f69"
+hover = { background = "#2ed20f39" }
+focus = { outline = "colors.core.accent" }
+
+[colors.list.item.hover]
+foreground = "#4c4f69"
+secondary_foreground = "#4c4f69"
+
+[colors.list.item.selection]
+background = "#eff1f5"
+foreground = "#4c4f69"
+secondary_background = "#eff1f5"
+secondary_foreground = "#4c4f69"
+
+[colors.grid.item]
+background = "#e6e9ef"
+hover = { outline = "#4c4f69" }
+selection = { outline = "#4c4f69" }
+
+[colors.scrollbars]
+background = "#eff1f5"
+
+[colors.loading]
+bar = "#4c4f69"
+spinner = "#4c4f69"
